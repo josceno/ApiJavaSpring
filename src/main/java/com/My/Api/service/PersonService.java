@@ -19,7 +19,7 @@ public class PersonService {
 
 
 
-    public int addPerson(@Qualifier("fakeDao") Person person){
+    public int addPerson(@Qualifier("postgres") Person person){
         return personDao.insertPerson(person);
     }
     public List<Person> getAllPeople(){return personDao.selectAllPeople();}
